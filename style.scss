@@ -1,0 +1,212 @@
+// Listing the colors
+$primary-white: #eeeeff;
+$primary-dark : #111111;
+$secondary-dark:#272727;
+$primary-gray:#dfdfdf;
+$secondary-gray:#5A5A5A;
+$primary-blue:#3E30FB;
+$primary-pink:#FF29C6;
+$primary-yellow: #ebc400;
+$primary-green : #009700;
+// Extra More
+// 1.Green
+$result-green-light:#93FF6D;
+$result-green-dark:#098400;
+// 2.Red
+$result-red-light:#FF9595;
+$result-red-dark:#A20000;
+
+//Getting the font-family
+@font-face {
+    font-family: IBMBold;
+    src: url(../fonts/IBM-bold.ttf);
+}
+@font-face {
+    font-family: IBMRegular;
+    src: url(../fonts/IBM-regular.ttf);
+}
+@font-face {
+    font-family: IBMMedium;
+    src: url(../fonts/IBM-Medium.ttf);
+}
+
+//Required mixin
+@mixin designedPara {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px; 
+}
+@mixin flexBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+// Extra Styling
+.container-850{
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.filler{
+    height: 20px;
+}
+
+// 1.Color Related Class
+.color-blue,
+.color-pink,
+.color-green,
+.color-dark{
+    color: $primary-white;
+}
+.color-blue{
+    background-color: $primary-blue;
+}
+.color-pink{
+    background-color: $primary-pink;
+}
+
+.color-yellow{
+    background-color: $primary-yellow;
+    color: $primary-dark;
+}
+.color-green{
+    background-color: $primary-green;
+}
+.color-dark{
+    background-color: $secondary-dark;
+}
+.result{
+    padding: 20px;
+    margin:10px 0 0 0;
+    &-success{
+        color: $result-green-dark;
+        background-color: $result-green-light;
+    }
+    &-failure{
+        color: $result-red-dark;
+        background-color: $result-red-light;
+    }
+}
+
+//General Styling
+body{
+    // background-color: $primary-white;
+    font-family: "IBMMedium";
+    font-size: 1.25rem;
+}
+h1{
+    font-size: 5rem;
+    line-height: 1.2;
+}
+a{
+    color: $primary-white;
+}
+button{
+    border-radius: 5px;
+}
+h2{
+    font-family: IBMRegular;
+    font-size: 1.4rem;
+    color: $primary-white;
+}
+
+//Section--main-section
+.main-section{
+    color: $primary-white;
+    background-color: $primary-dark;
+    padding: 80px 20px;
+
+    #{&}--title{
+        text-align: center;
+    }
+    #{&}--tags{
+        @include flexBox();
+        >p{
+            @include designedPara();
+        }
+    }
+    #{&}--info{
+        @include flexBox();
+        &-image{
+            height: 50px;
+            width: 50px;
+            >img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+        >p{
+            @include designedPara();
+        }
+    }
+}
+
+// Section:search-section
+.search-section{
+    padding: 40px 0;
+    form{
+        display: grid;
+        grid-template-columns: 70% 30%;
+        
+        //Creating the respsonsive
+        @media screen and (max-width:500px){
+            grid-template-columns: 1fr;
+        }
+        input{
+            padding: 20px;
+            margin-right: 10px;
+            background-color: $primary-gray;
+            border: 1px solid $primary-gray;
+            color: $secondary-gray;
+            font-size: 1.25rem;
+            border-radius: 5px;
+            text-transform: uppercase;
+            @media screen and (max-width:500px){
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+            &:focus{
+                outline: none;
+                border:1px solid $primary-blue;
+            }
+        }
+        button{
+            font-size: 1.2rem;
+            border: none;
+            outline: none;
+            background-color: $primary-blue;
+            color: $primary-gray;
+            padding: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+// Section-Result Section
+.result-section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+
+    @media screen and (max-width:600px){
+        grid-template-columns: 1fr;
+    }
+    #{&}--card{
+        text-align: center;
+        background-color: $primary-gray;
+        border-radius: 5px;
+        &-title{
+            background-color: $primary-dark;
+            color: $primary-white;
+            padding: 15px 0;
+            border-radius: 5px 5px 0 0;
+        }
+        &-info{
+            padding: 50px 20px;
+        }
+    }
+}

@@ -1,0 +1,240 @@
+@font-face {
+  font-family: IBMBold;
+  src: url(../fonts/IBM-bold.ttf);
+}
+
+@font-face {
+  font-family: IBMRegular;
+  src: url(../fonts/IBM-regular.ttf);
+}
+
+@font-face {
+  font-family: IBMMedium;
+  src: url(../fonts/IBM-Medium.ttf);
+}
+
+.container-850 {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.filler {
+  height: 20px;
+}
+
+.color-blue,
+.color-pink,
+.color-green,
+.color-dark {
+  color: #eeeeff;
+}
+
+.color-blue {
+  background-color: #3E30FB;
+}
+
+.color-pink {
+  background-color: #FF29C6;
+}
+
+.color-yellow {
+  background-color: #ebc400;
+  color: #111111;
+}
+
+.color-green {
+  background-color: #009700;
+}
+
+.color-dark {
+  background-color: #272727;
+}
+
+.result {
+  padding: 20px;
+  margin: 10px 0 0 0;
+}
+
+.result-success {
+  color: #098400;
+  background-color: #93FF6D;
+}
+
+.result-failure {
+  color: #A20000;
+  background-color: #FF9595;
+}
+
+body {
+  font-family: "IBMMedium";
+  font-size: 1.25rem;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 1.2;
+}
+
+a {
+  color: #eeeeff;
+}
+
+button {
+  border-radius: 5px;
+}
+
+h2 {
+  font-family: IBMRegular;
+  font-size: 1.4rem;
+  color: #eeeeff;
+}
+
+.main-section {
+  color: #eeeeff;
+  background-color: #111111;
+  padding: 80px 20px;
+}
+
+.main-section .main-section--title {
+  text-align: center;
+}
+
+.main-section .main-section--tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main-section .main-section--tags > p {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+.main-section .main-section--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main-section .main-section--info-image {
+  height: 50px;
+  width: 50px;
+}
+
+.main-section .main-section--info-image > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.main-section .main-section--info > p {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+.search-section {
+  padding: 40px 0;
+}
+
+.search-section form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+}
+
+@media screen and (max-width: 500px) {
+  .search-section form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.search-section form input {
+  padding: 20px;
+  margin-right: 10px;
+  background-color: #dfdfdf;
+  border: 1px solid #dfdfdf;
+  color: #5A5A5A;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 500px) {
+  .search-section form input {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.search-section form input:focus {
+  outline: none;
+  border: 1px solid #3E30FB;
+}
+
+.search-section form button {
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  background-color: #3E30FB;
+  color: #dfdfdf;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.result-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .result-section {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.result-section .result-section--card {
+  text-align: center;
+  background-color: #dfdfdf;
+  border-radius: 5px;
+}
+
+.result-section .result-section--card-title {
+  background-color: #111111;
+  color: #eeeeff;
+  padding: 15px 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.result-section .result-section--card-info {
+  padding: 50px 20px;
+}
+/*# sourceMappingURL=style.css.map */

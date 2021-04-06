@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boilerplate</title>
+    <style>
+        @import url(./css/base.css);
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Main-section -->
+    <section class="main-section">
+        <div class="main-section--title">
+            <h1>Weather Info</h1>
+        </div>
+        <div class="main-section--tags">
+            <p class="color-blue">#HTML</p>
+            <p class="color-pink">#SCSS</p>
+            <p class="color-yellow">#Javascript</p>
+            <p class="color-green">#OpenWeather API</p>
+        </div>
+        <div class="main-section--info">
+            <div class="main-section--info-image">
+                <img src="./images/Ebraj.png" alt="Ebraj">
+            </div>
+            <p class="color-dark"><a href="https://github.com/Ebraj" target="_blank">Ebraj Github</a></p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container-850">
+            <form>
+                <input type="text" id="input-field" placeholder="Location" autocomplete="off">
+                <button id="submit-btn">Get Response!</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Filler Div -->
+    <!-- <div class="filler"></div> -->
+
+    <!-- Result section -->
+    <div class="container-850">
+        <section class="result-section">
+            <div class="result-section--card">
+                <h2 class="result-section--card-title">Location</h2>
+                <p class="result-section--card-info"></p>
+            </div>
+            <div class="result-section--card">
+                <h2 class="result-section--card-title">Temperature</h2>
+                <p class="result-section--card-info"></p>
+            </div>
+            <div class="result-section--card">
+                <h2 class="result-section--card-title">Description</h2>
+                <p class="result-section--card-info"></p>
+            </div>
+        </section>
+        <div>
+            <p class="result result-success" hidden>Yeah! data fetched successfully.</p>
+            <p class="result result-failure" hidden>Sorry! failed to fetch the data.</p>
+        </div>
+    </div>
+    <!-- <script src="./main.js"></script> -->
+    <script src="./easy-way.js"></script>
+</body>
+
+</html>
